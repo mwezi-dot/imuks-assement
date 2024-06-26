@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],  // Targeting browser environment with DOM and ESNext features
+    "allowJs": true,  // Allowing JavaScript files in the TypeScript compilation
+    "skipLibCheck": true,  // Skipping type checking of declaration files from libraries
+    "strict": true,  // Enabling strict type checking
+    "noEmit": true,  // Not emitting output files (since noEmit is set to true, adjust if needed)
+    "esModuleInterop": true,  // Simplifying interoperability between CommonJS and ES modules
+    "module": "esnext",  // Using ES modules for module resolution
+    "moduleResolution": "node",  // Resolving modules using Node.js style module resolution
+    "resolveJsonModule": true,  // Enabling import of JSON modules
+    "isolatedModules": true,  // Ensuring each file is treated as a separate module
+    "jsx": "preserve",  // Preserving JSX in the output
+    "incremental": true,  // Enabling incremental compilation
+    "plugins": [
+      {
+        "name": "next"  // Using Next.js plugin for TypeScript
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]  // Mapping '@/*' paths to './src/*'
+    }
+  },
+  "include": [
+    "next-env.d.ts",  // Including Next.js environment types declaration
+    "**/*.ts",  // Including TypeScript files
+    "**/*.tsx",  // Including TypeScript JSX files
+    ".next/types/**/*.ts"  // Including Next.js type declarations
+  ],
+  "exclude": [
+    "node_modules"  // Excluding 'node_modules' directory from compilation
+  ]
+}
